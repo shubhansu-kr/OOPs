@@ -14,7 +14,7 @@ class student
 
 public:
     void setdata();
-    friend void getdata (student &X) ;
+    friend void getdata(student &X);
 };
 
 void student ::setdata()
@@ -31,9 +31,10 @@ void student ::setdata()
     cout << endl;
 }
 
-inline void getdata (student &X) {
-    cout << X.name << " " << X.roll << endl ;
-    cout << "Marks : " << X.sub[0] << " " << X.sub[1] << " " << X.sub[2] << " " << X.sub[3] << " " << X.sub[4] << " " << endl; 
+inline void getdata(student &X)
+{
+    cout << X.name << " " << X.roll << endl;
+    cout << "Marks : " << X.sub[0] << " " << X.sub[1] << " " << X.sub[2] << " " << X.sub[3] << " " << X.sub[4] << " " << endl;
 }
 
 class result
@@ -74,6 +75,7 @@ void result ::setresult(student &X)
 
 void result ::getresult(student &X)
 {
+    cout << "Name : " << X.name << " Roll : " << X.roll << endl;
     cout << "Marks : " << X.sub[0] << " " << X.sub[1] << " " << X.sub[2] << " " << X.sub[3] << " " << X.sub[4] << " " << endl;
     cout << "Percentage : " << percentage << endl;
     cout << "Grade : " << grade;
