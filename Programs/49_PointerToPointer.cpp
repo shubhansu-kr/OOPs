@@ -19,6 +19,20 @@ int main()
 
 // #include <iostream>
 // using namespace std;
+
+// int main()
+// {
+//     int x = 10, y = 20;
+//     int *ptr = &x;
+//     int &z = y;
+//     *ptr++;
+//     z++;
+//     cout << x << " " << y;
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
 // main()
 // {
 //     int a = 10, *p, **q;
