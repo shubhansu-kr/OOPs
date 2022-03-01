@@ -18,7 +18,7 @@ int main()
 
     x = jan;
     y = feb;
-    z = march;
+    z = april;
 
     cout << x << " " << y << " " << z;
     return 0;
