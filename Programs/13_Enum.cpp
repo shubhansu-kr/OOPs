@@ -7,7 +7,7 @@ enum sem
 {
     jan,
     feb = 10,
-    march=2,
+    march = 2,
     april,
     may
 };
@@ -20,7 +20,9 @@ int main()
     y = feb;
     z = april;
 
-    cout << x << " " << y << " " << z;
+    cout << x << " " << y << " " << z << ends;
+    cout << feb;
+
     return 0;
 }
 
