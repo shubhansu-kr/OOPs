@@ -12,10 +12,12 @@ int main()
 {
     string S1 = "Kumar";
     string S2("Shubhansu Kumar");
-    char *title = "Singh";
+    // char *title = "Singh";
     char name[20] = "Shubh";
 
     // cout << S1 + title << endl;
+    cout << S1.length() << endl; // 5
+    cout << S1.size() << endl;   // 5            Length and Size gives the same output 
 
     return 0;
 }

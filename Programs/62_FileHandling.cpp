@@ -7,7 +7,36 @@ using namespace std;
 
 int main()
 {
+    fstream obj1;
+    obj1.open("../Dummy.txt", ios::out);
 
+    string s;
+    cout << "Enter name " << endl;
+    getline(cin, s);
+
+    obj1 << s;
+    obj1.close();
+
+    fstream obj2("../Dummy.txt", ios::app);
+    cout << "Enter your age " << endl;
+    getline(cin, s);
+    obj2 << s; // Appends in the same line , without any space
+    obj2.close();
+
+    // ofstream is used for output writing
+    ofstream obj3("../Dummy.txt"); // NO need to specify the mode
+
+    cout << "What's You profession " << endl;
+    getline(cin, s);
+    obj3 << s << endl;
+    obj3.close();
+
+    // ifstream is used to read the file
+    ifstream obj4;
+    obj4.open("../Dummy.txt");
+    obj4 >> s; // Reads only one word 
+    cout << s << endl;
+    obj4.close(); 
     return 0;
 }
 
