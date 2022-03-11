@@ -23,7 +23,9 @@ int main()
         cout << a << endl;   // Finds the nearest a and prints 20
         cout << ::a << endl; // prints global 30
         // cout << ::(::a) << endl;  Error, Wrong syntax
+        int d = 20;
     }
+    // cout << "d : " << d << endl; Error: Variable was not declared in the scope.
 
     cout << b << endl; // prints zero
 
@@ -34,7 +36,7 @@ int main()
     {
         int c = 13;
         cout << c << endl;
-        // cout << ::c << endl; Error , NO global variable named c 
+        // cout << ::c << endl; Error , NO global variable named c
     }
 
     return 0;

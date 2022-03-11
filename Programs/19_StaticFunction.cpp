@@ -46,36 +46,39 @@ int main()
     return 0;
 }
 
-// #include<iostream>
+// #include <iostream>
 // using namespace std;
 // class item
-// { static char count;
-// int number;
-// public:
-// void getdata(int d)// static data + non static data
-// { number = d;
-// count++;
-// }
-// static void getcount()
 // {
-// cout<<count;
-// }
+//     static char count;
+//     int number;
+
+// public:
+//     void getdata(int d) // static data + non static data
+//     {
+//         number = d;
+//         count++;
+//     }
+//     static void getcount()
+//     {
+//         cout << count;
+//     }
 // };
-// char item :: count=97;
+// char item ::count = 97;
 // main()
 // {
-// item a,b,c;
-// a.getcount();
-// b.getcount();
-// c.getcount();
+//     item a, b, c;
+//     a.getcount();
+//     b.getcount();
+//     c.getcount();
 
-// a.getdata(100);
-// b.getdata(200);
-// c.getdata(300);
+//     a.getdata(100);
+//     b.getdata(200);
+//     c.getdata(300);
 
-// cout<<"\nAfter increment"<<endl;
-// a.getcount();
-// b.getcount();
-// c.getcount();
-// return 0;
+//     cout << "\nAfter increment" << endl;
+//     a.getcount();
+//     b.getcount();
+//     c.getcount();
+//     return 0;
 // }

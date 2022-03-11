@@ -27,7 +27,6 @@ int main()
     return 0;
 }
 
-
 // #include <iostream>
 // using namespace std;
 // void sum(int a, int b = 1, int c = 10)

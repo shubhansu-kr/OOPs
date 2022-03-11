@@ -23,36 +23,56 @@ int main()
     cout << x << " " << y << " " << z << ends;
     cout << feb;
 
+    // y = x + 1;  Throws error since y is not integer 
+    
     return 0;
 }
 
-// #include<iostream>
+// #include <iostream>
 // using namespace std;
 
 // main()
 // {
-// enum days{sun,mon,tues,wed,thur,fri,sat};// int a,b,c; days a,b,c;
-// days x,y;
-// x=mon;//1
-// y=wed;//3
+//     enum days
+//     {
+//         sun,
+//         mon,
+//         tues,
+//         wed,
+//         thur,
+//         fri,
+//         sat
+//     }; // int a,b,c; days a,b,c;
+//     days x, y;
+//     x = mon; // 1
+//     y = wed; // 3
 
-// //y=x+1;
+//     // y=x+1;
 
-// cout<<x<<" and "<<y;
+//     cout << x << " and " << y;
 // }
 
-// #include<iostream>
+// #include <iostream>
 // using namespace std;
 
 // main()
 // {
-// enum days{sun=3,mon,tues,wed=1000,thur=3,fri,sat};// int a,b,c; days a,b,c;
-// days x,y;
-// //x=1;//1 error
-// x=mon;
-// y=wed;//3
+//     enum days
+//     {
+//         sun = 3,
+//         mon,
+//         tues,
+//         wed = 1000,
+//         thur = 3,
+//         fri,
+//         sat
+//     }; // int a,b,c; days a,b,c;
+//     days x, y;
+//     // x=1;//1 error
+//     x = mon;
+//     y = wed; // 3
 
-// // y=x+1; error
+//     // y=x+1; error
 
-// cout<<x<<" and "<<y+1;// mon wed 1 3
+//     cout << x << " and " << y + 1; // mon wed 1 3
 // }
