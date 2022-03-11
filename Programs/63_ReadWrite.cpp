@@ -6,8 +6,46 @@
 
 using namespace std;
 
+class Emp
+{
+    static int count;
+    int empId;
+    string name;
+    float salary;
+
+public:
+    Emp()
+    {
+        empId = count;
+        count++;
+    }
+    inline void setdata(string &a, float &b);
+    void display();
+};
+
+int Emp::count = 12100;
+
+void Emp::setdata(string &a, float &b)
+{
+    name = a;
+    salary = b;
+}
+
+void Emp::display()
+{
+    cout << "Name : " << name << ends;
+    cout << "Employee ID : " << empId << ends;
+    cout << "Salary : " << salary << endl;
+}
+
 int main()
 {
+    Emp s1[5];
+    string s[] = {"shubh", "hell"};
+    ofstream obj;
+    obj.open("../Dummy.txt");
+    obj.write((char *)&s, sizeof(s));
+    obj.close();
 
     return 0;
 }
