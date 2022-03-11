@@ -51,6 +51,8 @@ int main()
     cout << "Find " << endl;
     cout << "A " << s1.find('A') << endl;
     cout << "A " << s1.find("BC") << endl;
+    // Element not present
+    cout << "X " << s1.find('X') << endl; // gv 
 
     // rfind - searches the string from the last
     cout << "A " << s1.rfind('A') << endl;
