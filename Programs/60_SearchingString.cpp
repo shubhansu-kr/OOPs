@@ -55,7 +55,7 @@ int main()
     cout << "X " << s1.find('X') << endl; // gv 
 
     // rfind - searches the string from the last
-    cout << "A " << s1.rfind('A') << endl;
+    cout << "A " << s1.rfind("DA") << endl;
 
     return 0;
 }
