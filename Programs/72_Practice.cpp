@@ -19,7 +19,7 @@ public:
 
 bool A ::operator>(A &a)
 {
-    return (x + y) > (a.x + a.y) ? true : false;
+    return (x + y) > (a.x + a.y);
 }
 
 int main()
