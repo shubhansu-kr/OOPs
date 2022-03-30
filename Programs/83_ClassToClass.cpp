@@ -25,6 +25,8 @@ public:
     {
         return a;
     }
+
+    // cast overloading 
 };
 
 class hrs
