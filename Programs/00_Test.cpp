@@ -3,17 +3,39 @@
 #include <iostream>
 using namespace std;
 
+class A
+{
+    int a;
+
+public:
+    A()
+    {
+        a = 1000;
+    }
+    A(int x)
+    {
+        cout << "PC called" << endl;
+        cout << a << endl;
+        cout << a + x << endl;
+        a += x;
+        cout << a << endl;
+    }
+    void display()
+    {
+        cout << a << endl;
+    }
+    // void operator=(int x) {
+    //     a = a+x ;
+    // }
+};
+
 int main()
 {
-    // int *a;
-    // // a = &1; error
-    // cout << a << endl;
+    A obj1;
+    obj1.display(); // Expecting - 1000
+    int count = 5;
+    obj1 = count; // operator overloaded 
+    obj1.display();
 
-    string s = "abs";
-    cout << s << endl;
-
-    cout << s[2];
-    cout << s[0 + 2];
-    cout << s + "abc" << endl;
     return 0;
 }
