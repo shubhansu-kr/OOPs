@@ -1,6 +1,8 @@
 // Practice - Hierarchical Inheritance
 
 #include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 class base
@@ -57,19 +59,11 @@ protected:
 public:
     derive2()
     {
-        if ((a <= b) && (b <= c))
-        {
-            mid = b;
-        }
-        else if (b <= a && a <= c)
-        {
-            mid = a;
-        }
-        else
-        {
-            mid = c;
-        }
+        vector<int> arr = {a, b, c};
+        sort(begin(arr), end(arr));
+        mid = arr[1];
     }
+
     void display()
     {
         cout << "mid val is " << mid << endl;
