@@ -1,43 +1,52 @@
-//
-
 #include <iostream>
 using namespace std;
-
-class A
+#include <fstream>
+#include <iomanip>
+class emp
 {
-    int a;
-    int b;
+private:
+    int empno;
+    char name[20];
+    float salary;
 
 public:
-    A()
+    void get()
     {
-        a = 1000;
-        b = 19;
-    }
-    A(int x)
-    {
-        cout << "PC called" << endl;
-        cout << a << " " << b << endl;
-        cout << a + x << endl;
-        a += x;
-        cout << a << " " << b << endl;
+        cout << "enter name ,emp no and salary" << endl;
+        cin >> name >> empno >> salary; 
+        cout << endl;
     }
     void display()
     {
-        cout << a << endl;
+        cout << setw(4) << empno << setw(4) << name << setw(3) << salary << endl;
     }
-    // void operator=(int x) {
-    //     a = a+x ;
-    // }
 };
 
 int main()
 {
-    A obj1;
-    obj1.display(); // Expecting - 1000
-    int count = 5;
-    obj1 = count; //
-    obj1.display();
+    ofstream fout;
+    emp e[3], em[3];
+    int n, i;
+
+    fout.open("../Dummy.txt", ios::app);
+    cout << "enter the number of employees";
+    cin >> n;
+    for (i = 0; i < n; i++)
+    {
+        e[i].get();
+        fout.write((char *)&e[i], sizeof(e[i]));
+    }
+    fout.close();
+    ifstream iff;
+    iff.open("../Dummy.txt", ios::in);
+
+    for (i = 0; i < n; i++)
+    {
+
+        iff.read((char *)&em[i], sizeof(em[i]));
+        em[i].display();
+    }
+    iff.close();
 
     return 0;
 }
