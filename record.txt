@@ -1,2 +1,4 @@
-1001 book a  author a  433
-1002 book b  author b  453
+Book_id Book_name Author_name Book_Price 
+1002 asfkl  fdlkahg 322
+1003 akfla fakef 456
+1005 aflkhga aknfav 453

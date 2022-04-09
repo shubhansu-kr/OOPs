@@ -37,7 +37,7 @@ public:
     }
 };
 
-int Book::id = 1000;
+int Book::id = 100000;
 
 int main()
 {
