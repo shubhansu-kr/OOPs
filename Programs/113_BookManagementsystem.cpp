@@ -13,21 +13,13 @@ using namespace std;
 
 class Book
 {
-    static int count;
-
 public:
-    int book_id, recordNumber;
+    int book_id;
     string book_name, book_author;
     float book_price;
 
-    Book()
-    {
-        recordNumber = ++count;
-    }
     void setInfo()
     {
-        cout << endl;
-        cout << "Record Number : " << recordNumber << endl;
         cout << "Enter Book_id : ";
         cin >> book_id;
         cout << "Enter Book_name : ";
@@ -38,11 +30,11 @@ public:
         cout << "Enter book price : ";
         cin >> book_price;
         cout << endl;
+        system("cls");
     }
 
     void getInfo()
     {
-        cout << "Record Number : " << recordNumber << endl;
         cout << "Book_id : " << book_id << endl;
         cout << "Book_name : " << book_name << endl;
         cout << "Author Name : " << book_author << endl;
@@ -53,18 +45,39 @@ public:
 
 void writeInFile(Book *obj, int n)
 {
-    fstream file("../record.csv", ios::out);
+    fstream fout("../record.txt", ios::out);
     for (int i = 0; i < n; i++)
     {
         if (obj[i].book_price < 500)
         {
-            file << obj[i].recordNumber << ", " << obj[i].book_id << ", " << obj[i].book_name << ", " << obj[i].book_author << ", " << obj[i].book_price << endl;
+            fout.write((char *)&obj[i], sizeof(obj[i]));
         }
     }
-    file.close();
 }
 
-int Book::count = 0;
+void readFromFile()
+{
+    fstream file("../record.txt", ios::in);
+    string line;
+    while (file)
+    {
+        getline(file, line);
+        cout << line << endl;
+    }
+}
+
+void updateFile(Book *obj, int temp_id, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (obj[i].book_id == temp_id)
+        {
+            cout << "Enter updated data : " << endl;
+            obj[i].setInfo();
+        }
+    }
+    writeInFile(obj, n);
+}
 
 int main()
 {
@@ -77,8 +90,33 @@ int main()
     {
         obj[i].setInfo();
     }
-
     writeInFile(obj, n);
 
+    int temp_id;
+    cout << "Enter the Book_id to update : ";
+    cin >> temp_id;
+
+    fstream fin;
+    fin.open("../record.txt", ios::in);
+
+    int flag = 0;
+    Book temp;
+    while (!fin.eof())
+    {
+        fin.read((char *)&temp, sizeof(temp));
+        if (temp_id == temp.book_id)
+        {
+            flag = 1;
+            updateFile(obj, temp_id, n);
+        }
+    }
+    if (flag)
+    {
+        readFromFile();
+    }
+    else
+    {
+        cout << "Record not found " << endl;
+    }
     return 0;
 }
