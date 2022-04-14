@@ -133,7 +133,12 @@ int main()
     cout << "Min : " << obj1.getData();
 
     C obj2;
-    
-    D obj3;
+    obj2.setSum() ;
+    cout << "Prime Sum : " << obj2.getSum() ;
+
+    E obj3;
+    obj3.setData() ;
+    obj3.getData() ;
+
     return 0;
 }
